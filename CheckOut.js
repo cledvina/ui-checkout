@@ -167,7 +167,7 @@ class CheckOut extends React.Component {
                     id="patron_identifier"
                     component={TextField}
                     validationEnabled={validationEnabled}
-                    startControl={<MaybeUserSearch {...parentProps} selectUser={this.autoSelectUser} visibleColumns={['Name', 'Patron Group', 'Username', 'Barcode']} dissableUserCreation={dissableUserCreation} />}
+                    startControl={<MaybeUserSearch {...parentProps} selectUser={this.autoSelectUser} visibleColumns={['Name', 'Patron Group', 'Username', 'Barcode']} dissableUserCreation={dissableUserCreation} query={{filters: "active.Active", sort: "Name"}} />}
                     onKeyDown={e => this.handleAdd(e, 'find_patron')}
                   />
                 </Col>
